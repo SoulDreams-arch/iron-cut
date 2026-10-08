@@ -11,11 +11,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="curtain in"><b>IRON<span>CUT</span></b></div>
+  <div class="progress"></div>
   <header class="header">
     <a class="logo" href="#top">IRON<span>CUT</span></a>
     <nav class="nav">
       <a href="#services">Услуги</a>
       <a href="#about">О нас</a>
+      <a href="#reel">Стрижки</a>
       <a href="#team">Барберы</a>
       <a href="#reviews">Отзывы</a>
       <a href="#contacts">Контакты</a>
@@ -26,7 +29,8 @@
 
   <main id="top">
     <section class="hero">
-      <div class="hero-bg"></div>
+      <div class="hero-bg" data-speed="0.25"></div>
+      <canvas id="pole" aria-hidden="true"></canvas>
       <div class="hero-content reveal">
         <p class="eyebrow">BARBERSHOP · EST. 2018</p>
         <h1>ТВОЙ СТИЛЬ.<br><em>ТВОИ ПРАВИЛА.</em></h1>
@@ -36,7 +40,7 @@
           <a class="btn btn-ghost" href="#services">Смотреть услуги</a>
         </div>
       </div>
-      <div class="hero-stamp">IC<br><small>№01</small></div>
+      <div class="hero-stamp" data-speed="-0.12">IC<br><small>№01</small></div>
       <div class="scroll">SCROLL <span>↓</span></div>
     </section>
 
@@ -82,7 +86,7 @@
     </section>
 
     <section class="about section" id="about">
-      <div class="about-image reveal"><div class="image-label">SINCE<br><b>2018</b></div></div>
+      <div class="about-image reveal" data-speed="0.06"><div class="image-label">SINCE<br><b>2018</b></div></div>
       <div class="about-copy reveal">
         <p class="eyebrow">02 / ABOUT US</p>
         <h2>МЕСТО, ГДЕ<br><span>ДЕЛАЮТ ПО-СВОЕМУ.</span></h2>
@@ -96,15 +100,26 @@
       </div>
     </section>
 
+    <section class="reel" id="reel">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">03 / REEL</p><h2>СТРИЖКИ<br><span>В ДВИЖЕНИИ</span></h2></div>
+        <p class="section-note">Лента наших работ. Наведи курсор — лента притормозит.</p>
+      </div>
+      <div class="reel-stage"><div class="reel-rows">
+        <div class="reel-track" data-row="a"></div>
+        <div class="reel-track rev" data-row="b"></div>
+      </div></div>
+    </section>
+
     <section class="section team" id="team">
       <div class="section-head reveal">
-        <div><p class="eyebrow">03 / THE TEAM</p><h2>НАШИ<br><span>БАРБЕРЫ</span></h2></div>
+        <div><p class="eyebrow">04 / THE TEAM</p><h2>НАШИ<br><span>БАРБЕРЫ</span></h2></div>
         <p class="section-note">Выбирай мастера по вайбу или просто доверься нам.</p>
       </div>
       <div class="team-grid">
-        <article class="barber reveal"><div class="portrait portrait-1"><span>01</span></div><h3>МАКС</h3><p>FADE · CLASSIC</p></article>
-        <article class="barber reveal"><div class="portrait portrait-2"><span>02</span></div><h3>АРТЁМ</h3><p>BEARD · TEXTURE</p></article>
-        <article class="barber reveal"><div class="portrait portrait-3"><span>03</span></div><h3>ДАНИИЛ</h3><p>MODERN · FADE</p></article>
+        <article class="barber reveal tilt"><div class="portrait portrait-1"><span>01</span></div><h3>МАКС</h3><p>FADE · CLASSIC</p></article>
+        <article class="barber reveal tilt"><div class="portrait portrait-2"><span>02</span></div><h3>АРТЁМ</h3><p>BEARD · TEXTURE</p></article>
+        <article class="barber reveal tilt"><div class="portrait portrait-3"><span>03</span></div><h3>ДАНИИЛ</h3><p>MODERN · FADE</p></article>
       </div>
     </section>
 
@@ -114,18 +129,18 @@
     </section>
 
     <section class="section reviews" id="reviews">
-      <div class="section-head reveal"><div><p class="eyebrow">04 / REVIEWS</p><h2>ЧТО<br><span>ГОВОРЯТ</span></h2></div></div>
+      <div class="section-head reveal"><div><p class="eyebrow">05 / REVIEWS</p><h2>ЧТО<br><span>ГОВОРЯТ</span></h2></div></div>
       <div class="review-grid">
-        <article class="review reveal"><div class="stars">★★★★★</div><p>«Наконец-то нашёл место, где не спрашивают “как обычно?”, а реально смотрят, что тебе подходит.»</p><strong>Илья · 28</strong></article>
-        <article class="review reveal"><div class="stars">★★★★★</div><p>«Стрижка держит форму даже через пару недель. Барбер понял меня с первого раза.»</p><strong>Михаил · 31</strong></article>
-        <article class="review reveal"><div class="stars">★★★★★</div><p>«Атмосфера топ. Кофе, музыка, персонал — всё на уровне. Теперь только сюда.»</p><strong>Роман · 24</strong></article>
+        <article class="review reveal tilt"><div class="stars">★★★★★</div><p>«Наконец-то нашёл место, где не спрашивают “как обычно?”, а реально смотрят, что тебе подходит.»</p><strong>Илья · 28</strong></article>
+        <article class="review reveal tilt"><div class="stars">★★★★★</div><p>«Стрижка держит форму даже через пару недель. Барбер понял меня с первого раза.»</p><strong>Михаил · 31</strong></article>
+        <article class="review reveal tilt"><div class="stars">★★★★★</div><p>«Атмосфера топ. Кофе, музыка, персонал — всё на уровне. Теперь только сюда.»</p><strong>Роман · 24</strong></article>
       </div>
     </section>
 
     <section class="booking section" id="booking">
       <div class="booking-card reveal">
         <div>
-          <p class="eyebrow">05 / BOOKING</p>
+          <p class="eyebrow">06 / BOOKING</p>
           <h2>ГОТОВ<br><span>ОБНОВИТЬСЯ?</span></h2>
           <p>Заполни форму — это тестовая версия сайта, поэтому форма просто покажет сообщение об успешной записи.</p>
         </div>
